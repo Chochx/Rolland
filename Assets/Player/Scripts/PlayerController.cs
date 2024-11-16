@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float rotationSpeed = 5.0f;
     [SerializeField] private Vector2 rayOffset = Vector2.zero;
+    [SerializeField] private float detectColiderDistance = 5f; 
 
 
     Rigidbody2D rb;
@@ -24,7 +25,7 @@ public class PlayerController : MonoBehaviour
         float distance = ((Vector2)transform.position - hit.point).magnitude;
         Debug.Log(distance);
 
-        if (hit.collider != null && distance < 5f)
+        if (hit.collider != null && distance < detectColiderDistance)
         {
             // Calculate the angle to match the ground normal
             Vector2 groundNormal = hit.normal;
