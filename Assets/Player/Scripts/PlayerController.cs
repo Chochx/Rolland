@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     {
         RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position + rayOffset, Vector2.down, rayCastDistance, groundLayer);
         float distance = ((Vector2)transform.position - hit.point).magnitude;
-        Debug.Log(distance);
+       
 
         if (hit.collider != null && distance < detectColiderDistance)
         {
