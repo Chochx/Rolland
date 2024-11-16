@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
         float distance = ((Vector2)transform.position - hit.point).magnitude;
         Debug.Log(distance);
 
-        if (hit.collider != null && distance < 2.0f)
+        if (hit.collider != null && distance < 3.5f)
         {
             // Calculate the angle to match the ground normal
             Vector2 groundNormal = hit.normal;
